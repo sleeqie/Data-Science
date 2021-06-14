@@ -69,6 +69,84 @@ x**2-y
 (y<-5:8)
 x-y
 
+#Functions
+length("aedede")
+
+#writing your own functions
+square <- function(x) x**2
+square (1:4)
+
+#To run functions on several statements
+square_and_subtract <- function(x, y)
+{squared <- x**2
+squared - y}
+square_and_subtract(1:5, rev (1:5))
+
+#another way to write the simple code
+square_and_subtract_other <- function(x,y) x ** 2- y
+square_and_subtract_other(1:5, rev (1:5))
+
+square_and_subtract_other_1 <- function (x,y) return (x ** 2- y)
+square_and_subtract_other_1(1:5, rev (1:5))
+
+#vectorized expressions and functions
+sum(1:4)
+average <- function(x) {
+  n <- length (x)
+  sum (x) / n
+}
+average (1:5) #OR
+
+average<- function(x) sum (x)/length (x)
+average(1:5)
+
+#control structures
+#if (<boolean expression>)<expression>
+if (2>3) 'false' #wont work
+if (3>2) 'true' #will work
+
+x <- 'foo'
+if (2>3) x <- 'bar'
+x
+
+
+if (3>2) x <- 'baz'
+x
+
+if (2>3) 'bar' else 'baz'
+
+
+x <- 1:5
+if (x>3) 'bar' else 'baz' #it wont run
+
+x <- (1:5)
+ifelse(x> 3, 'bar', 'baz')
+
+#maybe square
+maybe_square <-  function (x) {
+  ifelse (x%%2== 0, x**2, x)
+}
+maybe_square(1:5)
+
+#functor
+x <- 1:5
+total <- 0
+for (element in x) total <- total + element
+total
+
+x1 <- 1:4
+total <- 0
+for (element in x1) total <- total + element
+total
+
+x2 <- 1:2
+total <- 0
+for (element in x2) total <- total + element
+total
+
+#seq_along
+
+
 
 
 
