@@ -134,6 +134,12 @@ total <- 0
 for (element in x) total <- total + element
 total
 
+x <- 1:5
+total <- 1
+for (element in x) total <- total + element
+total
+
+
 x1 <- 1:4
 total <- 0
 for (element in x1) total <- total + element
@@ -144,10 +150,110 @@ total <- 0
 for (element in x2) total <- total + element
 total
 
+
 #seq_along
+x <-1:5
+total <- 0
+for (index in seq_along(x)) {
+  element <- x[index]
+  total <- total + element
+}
+total
+
+x <-1:5
+total <- 0
+index <- 1
+
+while (index <-  length(x)) {
+  element <- x[index]
+  index <-index + 1
+  total <- total + element
+}
+total
+
+#factors
+f <-  factor(c('small', 'small', 'medium', 'large', 'small','large'))
+f
+levels(f)
+
+ff <- factor(c('small', 'small', 'medium', 'large', 'small','large'))
+level = c('small', 'medium', 'large')
+ff
+summary(f)
+summary(ff)
+
+#ordered
+of <- factor(c('small', 'small', 'medium', 'large', 
+               'small','large'),
+             levels = c('small', 'medium', 'large'), ordered = TRUE)
+of
+ordered(f)
+
+#not indexing
+v <- 1:4
+names (v) <- LETTERS [1:4]
+v
+
+(ff <- factor(LETTERS[1:4]))
+v[ff]
+as.numeric(ff)
+
+#data frames
+df <- data.frame(a= 1:4, b= LETTERS [1:4])
+df
+df [3,2]
+df [2,]
+df [1,]
+df[,1]
+df$a
+df$b
+df <- data.frame(a=1:4, b= LETTERS[1:4], stringsAsFactors = FALSE)
+
+#r and c bind
+df2 <- data.frame(a=5:7, b= LETTERS [5:7])
+df2
+rbind (df, df2)
+
+df3 <- data.frame(c=5:8, b= LETTERS [5:8])
+df3
+cbind(df2, df3)
+
+#dealing with missing values
+NA + 5
+
+
+is.na (NA)
+is.na(4)
+
+#installing packages
+install.packages('magrittr')
+library('magrittr')
+summary('magritte')
+head('magritte')
+
+?magrittr
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
