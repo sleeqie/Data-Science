@@ -1,3 +1,16 @@
+# The easiest way to get magrittr is to install the whole tidyverse:
+install.packages("tidyverse")
+
+# Alternatively, install just magrittr:
+install.packages("magrittr")
+
+# Or the development version from GitHub:
+install.packages("devtools")
+devtools::install_github("tidyverse/magrittr")
+
+
+
+
 #data manipulation
 library(datasets)
 library(help= 'datasets')
@@ -214,10 +227,25 @@ formatted_breast_cancer %>% group_by(Class, as.factor(Cell.size))%>%
 formatted_breast_cancer %>% group_by(as.factor(Cell.size), Class)%>%
   summarise(mean.thickness = mean (Cl.thickness))
 
-#
+#tidying data with tidyr
+install.packages('tidyr')
+library(tidyr)
+iris%>% select(Species, Petal.Length) %>% head (3)
+
+iris%>% select(Species, Petal.Length) %>% head (3) %>% 
+  qplot (Species, Petal.Length, geom= 'boxplot', data = . )
+
+#USING TIDYR
+iris%>%
+gather(key = Attribute, value= measurement, Sepal.Length, Sepal.Width)%>%
+  select(Species, Attribute, measurement) %>%
+  head(3)
 
 
-
+iris%>%
+  gather(key = Attribute, value= measurement, Sepal.Length, Sepal.Width)%>%
+  select(Species, Attribute, measurement) %>%
+  qplot(Attribute, measurement, geom= 'boxplot', facets = . ~ Species, data = .)
 
 
 
