@@ -2,7 +2,7 @@
 *.js linguist-detectable=true
 *.R linguist-detectable=true
 *.sql linguist-detectable=false
-*.jupyter notebook linguist-detectable=true
+*.jupyter notebook linguist-detectable=false
 *.py linguist-detectable=false
 *.csv linguist-detectable=false
 *.java linguist-detectable=false
