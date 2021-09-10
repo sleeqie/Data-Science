@@ -3,6 +3,8 @@
 *.R linguist-detectable=true
 *.sql linguist-detectable=true
 *.jupyter notebook linguist-detectable=false
-*.py linguist-detectable=true
+*.python linguist-detectable=true
 *.csv linguist-detectable=true
-*.java linguist-detectable=true
+*.java script linguist-detectable=true
+*.json linguist-detectable=true
+*.yaml linguist-detectable=true
