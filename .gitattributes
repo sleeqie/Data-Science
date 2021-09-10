@@ -1,8 +1,8 @@
-*.css linguist-detectable=true
+*.css linguist-detectable=false
 *.js linguist-detectable=true
 *.R linguist-detectable=true
-*.sql linguist-detectable=true
+*.sql linguist-detectable=false
 *.jupyter notebook linguist-detectable=true
-*.py linguist-detectable=true
+*.py linguist-detectable=false
 *.csv linguist-detectable=false
 *.java linguist-detectable=false
